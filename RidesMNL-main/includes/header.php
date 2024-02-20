@@ -9,7 +9,8 @@
         <!-- plugins:css -->
         <link rel="stylesheet" href="vendors/feather/feather.css">
         <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-        <
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
         <!-- endinject -->
         <!-- Plugin css for this page -->
         <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
