@@ -65,7 +65,7 @@
         }
 
         #searchIcon {
-            margin-left: 750px;
+            margin-left: 800px;
             position: absolute;
             left: 10px;
             top: 50%;
@@ -75,7 +75,7 @@
         }
 
         #searchBar {
-            margin-left: 750px;
+            margin-left: 800px;
             border-radius: 40px;
             height: 40px;
             width: 250px;
