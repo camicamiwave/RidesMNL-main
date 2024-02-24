@@ -25,24 +25,5 @@
             </div>
         </div>
 
-        <!-- Cards-->
-        <a href="rates_bus.php" style="text-decoration: none;">
-        <div class="card mb-3" style="max-width: 350px;">
-            <div class="row no-gutters">
-            <div class="col-md-4 m-auto pl-3">
-                <i class="fa fa-bus" aria-hidden="true" style="font-size:30px; color: #ffffff; background:#f16c99; padding:10%; border-radius:100%;"></i>
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                <h5 class="card-title m-auto" style="color:#f16c99;">Bus</h5>
-                </div>
-            </div>
-            </div>
-        </div>
-        </a>
-
-        
-
-        
     <!-- content-wrapper ends -->
 <?php include('includes/footer.php'); ?>

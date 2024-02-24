@@ -30,7 +30,113 @@
             </div>
           </div>
         </div>
-    </div> 
+    </div>
+    
+    <div class="row" style="align-items: center;">
+      <div class="col-xl-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-group row">
+              <div class="col">
+                <label>Starting Fare</label>
+                <div id="the-basics">
+                  <input class="typeahead" type="text" value="P20.00" readonly>
+                </div>
+              </div>
+              <div class="col-sm-2 mt-4" style="text-align: center;"></div>
+              <div class="col"></div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col">
+                <label>Distance KM</label>
+                <div id="the-basics">
+                  <input class="typeahead" type="text" value="3" readonly>
+                </div>
+              </div>
+              <div class="col-sm-2 mt-4" style="text-align: center;">
+                <label></label>
+                <div>
+                  <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col">
+                <label>Estimated Fare</label>
+                <div id="bloodhound">
+                  <input class="typeahead" type="text" value="P60.00" readonly>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col">
+                <label>Distance KM</label>
+                <div id="the-basics">
+                  <input class="typeahead" type="text" value="4" readonly>
+                </div>
+              </div>
+              <div class="col-sm-2 mt-4" style="text-align: center;">
+                <label></label>
+                <div>
+                  <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col">
+                <label>Estimated Fare</label>
+                <div id="bloodhound">
+                  <input class="typeahead" type="text" value="P70.00" readonly>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col">
+                <label>Distance KM</label>
+                <div id="the-basics">
+                  <input class="typeahead" type="text" value="5" readonly>
+                </div>
+              </div>
+              <div class="col-sm-2 mt-4" style="text-align: center;">
+                <label></label>
+                <div>
+                  <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col">
+                <label>Estimated Fare</label>
+                <div id="bloodhound">
+                  <input class="typeahead" type="text" value="P80.00" readonly>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col">
+                <label>Distance KM</label>
+                <div id="the-basics">
+                  <input class="typeahead" type="text" value="6" readonly>
+                </div>
+              </div>
+              <div class="col-sm-2 mt-4" style="text-align: center;">
+                <label></label>
+                <div>
+                  <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col">
+                <label>Estimated Fare</label>
+                <div id="bloodhound">
+                  <input class="typeahead" type="text" value="P90.00" readonly>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
   <!-- content-wrapper ends -->
 <?php include('includes/footer.php'); ?>
