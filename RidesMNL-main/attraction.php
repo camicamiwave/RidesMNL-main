@@ -157,6 +157,10 @@
         h3.font-weight-bold {
             color: black;
         }
+
+        .back-button {
+            color: #3009FE;
+        }
         
     </style>
 </head>
@@ -164,18 +168,12 @@
 <body>
 
     <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+    <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                   <h3 class="font-weight-bold">
-                    <a href="javascript:history.go(-1);" class="btn btn-link">
+                    <a href="javascript:history.go(-1);" class="btn btn-link back-button">
                     <i class="icon-arrow-left menu-icon"></i></a>
                     Attraction List</h3>
                 </div>
-              </div>
-            </div>
-        </div>  
 
         <div class="flex-container">
             <div id="searchContainer">
@@ -206,62 +204,68 @@
     </table>
 
     <script>
-        var attractions = [
-            { name: "National Museum", address: "Padre Burgos Ave, Rizal Park, Ermita, Manila", type: "Museum" },
-            { name: "Manila Ocean Park", address: "Quirino Grandstand, Ermita, Manila", type: "Park" }
-        ];
+    var attractions = [
+        { name: "National Museum", address: "Padre Burgos Ave, Rizal Park, Ermita, Manila", type: "Museum" },
+        { name: "Manila Ocean Park", address: "Quirino Grandstand, Ermita, Manila", type: "Park" }
+    ];
 
-        function displayAttractions() {
-            var tableBody = document.getElementById("attractionTableBody");
-            tableBody.innerHTML = "";
+    function displayAttractions() {
+        var tableBody = document.getElementById("attractionTableBody");
+        tableBody.innerHTML = "";
 
-            attractions.forEach(function (attraction, index) {
-                var row = tableBody.insertRow();
-                row.className = "table-row";
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                var cell3 = row.insertCell(2);
-                var cell4 = row.insertCell(3);
+        attractions.forEach(function (attraction, index) {
+            var row = tableBody.insertRow();
+            row.className = "table-row";
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
 
-                cell1.innerHTML = attraction.name;
-                cell2.innerHTML = attraction.address;
-                cell3.innerHTML = attraction.type;
+            cell1.innerHTML = attraction.name;
+            cell2.innerHTML = attraction.address;
+            cell3.innerHTML = attraction.type;
 
-                var actionIcons = document.createElement("div");
-                actionIcons.className = "action-icons";
+            var actionIcons = document.createElement("div");
+            actionIcons.className = "action-icons";
 
-                var editIcon = document.createElement("span");
-                editIcon.className = "edit-icon";
-                editIcon.innerHTML = '<i class="fas fa-edit"></i>';
-                editIcon.onclick = function () {
-                    editAttraction(index);
-                };
+            var editIcon = document.createElement("span");
+            editIcon.className = "edit-icon";
+            editIcon.innerHTML = '<i class="fas fa-edit"></i>';
+            editIcon.onclick = function () {
+                editAttraction(index);
+            };
 
-                var deleteIcon = document.createElement("span");
-                deleteIcon.className = "delete-icon";
-                deleteIcon.innerHTML = '<i class="fas fa-trash"></i>';
-                deleteIcon.onclick = function () {
-                    deleteAttraction(index);
-                };
+            var deleteIcon = document.createElement("span");
+            deleteIcon.className = "delete-icon";
+            deleteIcon.innerHTML = '<i class="fas fa-trash"></i>';
+            deleteIcon.onclick = function () {
+                deleteAttraction(index);
+            };
 
-                actionIcons.appendChild(editIcon);
-                actionIcons.appendChild(deleteIcon);
+            actionIcons.appendChild(editIcon);
+            actionIcons.appendChild(deleteIcon);
 
-                cell4.appendChild(actionIcons);
-            });
-        }
+            cell4.appendChild(actionIcons);
+        });
+    }
 
-        function editAttraction(index) {
-            window.location.href = 'EditAttractionForm.html?index=' + index;
-        }
+    function editAttraction(index) {
+        var attraction = attractions[index];
+        var editAttractionUrl = 'EditAttraction.php?name=' + encodeURIComponent(attraction.name) +
+                               '&address=' + encodeURIComponent(attraction.address) +
+                               '&type=' + encodeURIComponent(attraction.type);
+        window.location.href = editAttractionUrl;
+    }
 
-        function deleteAttraction(index) {
-            attractions.splice(index, 1);
-            displayAttractions();
-        }
-
+    function deleteAttraction(index) {
+        attractions.splice(index, 1);
         displayAttractions();
-    </script>
+    }
+
+    displayAttractions();
+</script>
+
 </body>
 
 </html>
+
