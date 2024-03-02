@@ -13,17 +13,11 @@
             <div class="col-12 col-xl-4">
               <div class="justify-content-end d-flex">
                 <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                  <button type="button" class="btn btn-success btn-icon-text">
-                    <i class="fa fa-plus" aria-hidden="true"></i>                                                   
-                    Add
+                  <button type="button" style="border: none; color: #2900ff; background-color:#f5f7ff;">
+                    <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>                                                   
                   </button>
-                  <button type="button" class="btn btn-info btn-icon-text">
-                    <i class="fa fa-pencil" aria-hidden="true"></i> 
-                    Edit                                                                             
-                  </button>
-                  <button type="button" class="btn btn-danger btn-icon-text">
-                    <i class="fa fa-trash" aria-hidden="true"></i>                        
-                    Delete
+                  <button type="button" style="border: none; color: #2900ff; background-color:#f5f7ff;">
+                    <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>                                                                           
                   </button>
                 </div>
               </div>
