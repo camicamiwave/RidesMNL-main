@@ -92,36 +92,91 @@
             </div>
         </div>  
 
-    <div id="addAttractionForm">
+        <div id="addAttractionForm">
         <label for="attractionName">Attraction Name</label>
-        <input type="text" id="attractionName" placeholder="Enter attraction Name">
+        <input type="text" id="attractionName" placeholder="Enter Attraction Name">
 
         <label for="attractionAddress">Complete Address</label>
         <input type="text" id="attractionAddress" placeholder="Enter Complete Address">
-        
 
         <label for="displayLocation">Display Location</label>
         <select id="displayLocation">
-            <option value=" " disabled selected>Choose City/Town</option>
+            <option value="" disabled selected>Choose City/Town</option>
+            <option value="Location 1">Location 1</option>
+            <option value="Location 2">Location 2</option>
+            <option value="Location 3">Location 3</option>
         </select>
-        
 
         <label for="attractionType">Type of Attraction</label>
         <select id="attractionType">
-            <option value=" " disabled selected>Choose Type of Attraction</option>
+            <option value="" disabled selected>Choose Type of Attraction</option>
+            <option value="Type 1">Type 1</option>
+            <option value="Type 2">Type 2</option>
+            <option value="Type 3">Type 3</option>
         </select>
-        
 
         <label for="longitude">Longitude</label>
-        <input type="text" id="longitude" placeholder="Enter longitude">
+        <input type="text" id="longitude" placeholder="Enter Longitude">
 
         <label for="latitude">Latitude</label>
         <input type="text" id="latitude" placeholder="Enter Latitude">
 
-        <button id="submitButton" onclick="addAttractionForm()">Submit</button>
-        <button id="cancelButton" onclick="addAttractionForm()">Cancel</button>
-
+        <button id="submitButton">Submit</button>
+        <button id="cancelButton" onclick="window.location.href='index.php'">Cancel</button>
     </div>
+</div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"></script>
+
+
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+
+    const firebaseConfig = {
+            apiKey: "AIzaSyCPSg2yG1TnhYgzK2aNEVpbxMf4w2qwYP0",
+            authDomain: "ridesmnl-48ff4.firebaseapp.com",
+            databaseURL: "https://ridesmnl-48ff4-default-rtdb.firebaseio.com",
+            projectId: "ridesmnl-48ff4",
+            storageBucket: "ridesmnl-48ff4.appspot.com",
+            messagingSenderId: "51707026546",
+            appId: "1:51707026546:web:96df015fa7a950149836eb",
+            measurementId: "G-N3C1209JN6"
+            };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    document.getElementById("submitButton").addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const attractionName = document.getElementById("attractionName").value;
+        const attractionAddress = document.getElementById("attractionAddress").value;
+        const displayLocation = document.getElementById("displayLocation").value;
+        const attractionType = document.getElementById("attractionType").value;
+        const longitude = document.getElementById("longitude").value;
+        const latitude = document.getElementById("latitude").value;
+
+        // Push data to the database
+        const attractionsRef = ref(db, 'attractions');
+        push(attractionsRef, {
+            attractionName: attractionName,
+            attractionAddress: attractionAddress,
+            displayLocation: displayLocation,
+            attractionType: attractionType,
+            longitude: longitude,
+            latitude: latitude
+        }).then(() => {
+            // Redirect to the dashboard page after data is successfully pushed
+            window.location.href = "index.php";
+        }).catch((error) => {
+            console.error("Error adding attraction: ", error);
+        });
+    });
+</script>
 
     <script>
 
