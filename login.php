@@ -71,9 +71,12 @@
   <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"></script>
 
+  <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+    import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
     const firebaseConfig = {
     apiKey: "AIzaSyCPSg2yG1TnhYgzK2aNEVpbxMf4w2qwYP0",
@@ -85,26 +88,49 @@
     appId: "1:51707026546:web:96df015fa7a950149836eb",
     measurementId: "G-N3C1209JN6"
     };
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
 
-    // get ref to database services
+   // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
 
-    document.getElementById("login").addEventListener('click', function(e) {
-      e.preventDefault(); // prevent form submission
+    document.getElementById("login").addEventListener('click', async function(e) {
+        e.preventDefault(); // prevent form submission
 
-      const username = document.getElementById("exampleInputUsername1").value;
+        const username = document.getElementById("exampleInputUsername1").value;
 
-      // Write user data to the database
-      set(ref(db, 'accounts/' + username), {
-        username: username
-      });
+        try {
+            // Check if the user exists in the database
+            const userRef = ref(db, 'accounts/' + username);
+            const snapshot = await get(userRef);
+            const userData = snapshot.val();
 
-      alert("Login Successfully!");
-       
-    // Redirect to the dashboard page
-    window.location.href = "index.php";
+            if (userData) {
+                // User exists, proceed with login
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Verified Account',
+                    text: 'Login Successfully',
+                }).then(() => {
+                    // Redirect to the dashboard page
+                    window.location.href = "index.php";
+                });
+            } else {
+                // User doesn't exist, show error message with SweetAlert
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Username not found!',
+                });
+            }
+        } catch (error) {
+            console.error("Error logging in:", error);
+            // Show error message with SweetAlert
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong! Please try again later.',
+            });
+        }
     });
 
   </script>
