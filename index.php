@@ -2,7 +2,7 @@
 
 <div class="content-wrapper">
     <div class="row">
-        <div class="col-md-6 grid-margin transparent">
+        <div class="col-md-8 grid-margin transparent">
             <div class="row">
                 <div class="col-md-6 mb-4 stretch-card transparent">
                     <div class="card card-tale" style="align-items: center; background-color: white;">
@@ -15,6 +15,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4 grid-margin stretch-card">
+            <div class="card card-tale" style="background-color: white; color:black;">
+                <div class="card-people mt-auto">
+                    <p class="card-title" style="margin-left: 20px;">Attraction List</p>
+                    <ul class="list-group list-group-flush flex-grow-1" style="align-items: left;">
+                        <li class="list-group-item">National Museum</li>
+                        <li class="list-group-item">Manila Ocean Park</li>
+                        <li class="list-group-item">Rizal Park</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="row">
@@ -47,69 +60,64 @@
             </div>
         </div>
         <div class="col-md-4 stretch-card grid-margin">
-            <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
+              <div class="card">
                 <div class="card-body">
-                    <p class="card-title">Charts</p>
-                    <div class="charts-data">
-                    <div class="mt-3">
-                        <p class="mb-0">Data 1</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        <div class="progress progress-md flex-grow-1 mr-4">
-                            <div class="progress-bar bg-inf0" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                  <p class="card-title">User Feedback</p>
+                  <ul class="icon-data-list">
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face1.jpg" alt="user">
+                        <div>
+                          <p class="text-info mb-1">Isabella Becker</p>
+                          <p class="mb-0">Sales dashboard have been created</p>
+                          <small>9:30 am</small>
                         </div>
-                        <p class="mb-0">5k</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face2.jpg" alt="user">
+                        <div>
+                          <p class="text-info mb-1">Adam Warren</p>
+                          <p class="mb-0">You have done a great job #TW111</p>
+                          <small>10:30 am</small>
                         </div>
-                    </div>
-                    <div class="mt-3">
-                        <p class="mb-0">Data 2</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        <div class="progress progress-md flex-grow-1 mr-4">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                      <img src="images/faces/face3.jpg" alt="user">
+                     <div>
+                      <p class="text-info mb-1">Leonard Thornton</p>
+                      <p class="mb-0">Sales dashboard have been created</p>
+                      <small>11:30 am</small>
+                     </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face4.jpg" alt="user">
+                        <div>
+                          <p class="text-info mb-1">George Morrison</p>
+                          <p class="mb-0">Sales dashboard have been created</p>
+                          <small>8:50 am</small>
                         </div>
-                        <p class="mb-0">1k</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face5.jpg" alt="user">
+                        <div>
+                        <p class="text-info mb-1">Ryan Cortez</p>
+                        <p class="mb-0">Herbs are fun and easy to grow.</p>
+                        <small>9:00 am</small>
                         </div>
-                    </div>
-                    <div class="mt-3">
-                        <p class="mb-0">Data 3</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        <div class="progress progress-md flex-grow-1 mr-4">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p class="mb-0">992</p>
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <p class="mb-0">Data 4</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        <div class="progress progress-md flex-grow-1 mr-4">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p class="mb-0">687</p>
-                        </div>
-                    </div>
-                    </div>  
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                </div>
+              </div>
             </div>
-            <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
-                <div class="card data-icon-card-primary">
-                <div class="card-body">
-                    <p class="card-title text-white">Number of Meetings</p>                      
-                    <div class="row">
-                    <div class="col-8 text-white">
-                        <h3>34040</h3>
-                        <p class="text-white font-weight-500 mb-0">The total number of sessions within the date range.It is calculated as the sum . </p>
-                    </div>
-                    <div class="col-4 background-icon">
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
         </div>
 
 
