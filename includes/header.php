@@ -25,6 +25,24 @@
     </head>
 
     <body>
+
+        <!-- Include Firebase SDK -->
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+        <script>
+            // Initialize Firebase
+            const firebaseConfig = {
+                    apiKey: "AIzaSyCPSg2yG1TnhYgzK2aNEVpbxMf4w2qwYP0",
+                    authDomain: "ridesmnl-48ff4.firebaseapp.com",
+                    databaseURL: "https://ridesmnl-48ff4-default-rtdb.firebaseio.com",
+                    projectId: "ridesmnl-48ff4",
+                    storageBucket: "ridesmnl-48ff4.appspot.com",
+                    messagingSenderId: "51707026546",
+                    appId: "1:51707026546:web:96df015fa7a950149836eb",
+                    measurementId: "G-N3C1209JN6"
+                    };
+        </script>
+
         <div class="container-scroller">
             <?php include('navbar.php'); ?>
             <div class="container-fluid page-body-wrapper">
