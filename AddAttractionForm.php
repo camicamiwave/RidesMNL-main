@@ -161,7 +161,7 @@
         const latitude = document.getElementById("latitude").value;
 
         // Push data to the database
-        const attractionsRef = ref(db, 'attractions');
+        const attractionsRef = ref(db, 'app_data/near_me/attractions');
         push(attractionsRef, {
             attractionName: attractionName,
             attractionAddress: attractionAddress,
@@ -171,7 +171,7 @@
             latitude: latitude
         }).then(() => {
             // Redirect to the dashboard page after data is successfully pushed
-            window.location.href = "index.php";
+            window.location.href = "attraction.php";
         }).catch((error) => {
             console.error("Error adding attraction: ", error);
         });
