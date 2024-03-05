@@ -261,8 +261,11 @@
         displayAttractions();
     }
 
-    displayAttractions();
+    //displayAttractions();
 </script>
+
+      <!-- Your HTML content here -->
+      <script src="assets/js/retriever_attraction.js" type="module"></script>
 
 </body>
 

@@ -8,21 +8,24 @@
                     <div class="card card-tale" style="align-items: center; background-color: white;">
                     <div class="card-body">
                         <h4 class="mb-4" style="font-weight: bold; color:black; ">Total Active Users</h4>
-                        <p class="fs-30 mb-2" style="color:blue; ">3000</p>
-                        <p style="align-items:center; color:black; ">As of 12/01/2023</p>
+                        <p class="fs-30 mb-2" style="color:blue; " id="total_active_user"><!--3000--></p>
+                        <p style="align-items:center; color:black; " id="as_of_date"><!--As of 12/01/2023--></p>
                     </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-md-4 grid-margin stretch-card">
             <div class="card card-tale" style="background-color: white; color:black;">
                 <div class="card-people mt-auto">
                     <p class="card-title" style="margin-left: 20px;">Attraction List</p>
-                    <ul class="list-group list-group-flush flex-grow-1" style="align-items: left;">
-                        <li class="list-group-item">National Museum</li>
+                    <ul class="list-group list-group-flush flex-grow-1" id="attractionList" style="align-items: left;">
+                        
+                      <li class="list-group-item">National Museum</li>
                         <li class="list-group-item">Manila Ocean Park</li>
                         <li class="list-group-item">Rizal Park</li>
+
                     </ul>
                 </div>
             </div>
@@ -120,7 +123,11 @@
             </div>
         </div>
 
+      <script src="assets/js/server.js"></script>
 
+      <!-- Your HTML content here -->
+      <script src="assets/js/retriever_realtime.js" type="module"></script>
+      <script src="assets/js/retriever_attraction_list.js" type="module"></script>
 
 
     <!-- Vendor JS Files -->
