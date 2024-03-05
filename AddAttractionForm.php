@@ -92,38 +92,40 @@
             </div>
         </div>  
 
-        <div id="addAttractionForm">
-        <label for="attractionName">Attraction Name</label>
-        <input type="text" id="attractionName" placeholder="Enter Attraction Name">
+        <form action="code.php" method="POST">
+            <div id="addAttractionForm">
+                <label for="attractionName">Attraction Name</label>
+                <input type="text" name="attractionName" placeholder="Enter Attraction Name">
 
-        <label for="attractionAddress">Complete Address</label>
-        <input type="text" id="attractionAddress" placeholder="Enter Complete Address">
+                <label for="attractionAddress">Complete Address</label>
+                <input type="text" name="attractionAddress" placeholder="Enter Complete Address">
 
-        <label for="displayLocation">Display Location</label>
-        <select id="displayLocation">
-            <option value="" disabled selected>Choose City/Town</option>
-            <option value="Location 1">Location 1</option>
-            <option value="Location 2">Location 2</option>
-            <option value="Location 3">Location 3</option>
-        </select>
+                <label for="displayLocation">Display Location</label>
+                <select name="displayLocation">
+                    <option value="" disabled selected>Choose City/Town</option>
+                    <option value="Location 1">Location 1</option>
+                    <option value="Location 2">Location 2</option>
+                    <option value="Location 3">Location 3</option>
+                </select>
 
-        <label for="attractionType">Type of Attraction</label>
-        <select id="attractionType">
-            <option value="" disabled selected>Choose Type of Attraction</option>
-            <option value="Type 1">Type 1</option>
-            <option value="Type 2">Type 2</option>
-            <option value="Type 3">Type 3</option>
-        </select>
+                <label for="attractionType">Type of Attraction</label>
+                <select name="attractionType">
+                    <option value="" disabled selected>Choose Type of Attraction</option>
+                    <option value="Type 1">Type 1</option>
+                    <option value="Type 2">Type 2</option>
+                    <option value="Type 3">Type 3</option>
+                </select>
 
-        <label for="longitude">Longitude</label>
-        <input type="text" id="longitude" placeholder="Enter Longitude">
+                <label for="longitude">Longitude</label>
+                <input type="text" name="longitude" placeholder="Enter Longitude">
 
-        <label for="latitude">Latitude</label>
-        <input type="text" id="latitude" placeholder="Enter Latitude">
+                <label for="latitude">Latitude</label>
+                <input type="text" name="latitude" placeholder="Enter Latitude">
 
-        <button id="submitButton">Submit</button>
-        <button id="cancelButton" onclick="window.location.href='index.php'">Cancel</button>
-    </div>
+                <button type="submit" name="save_attraction">Submit</button>
+                <button id="cancelButton" onclick="window.location.href='index.php'">Cancel</button>
+            </div>
+        </form>
 </div>
 
     <!-- Firebase SDK -->
